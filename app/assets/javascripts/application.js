@@ -17,8 +17,3 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-
-// window.on('turbolinks:load', function() {
-//   alert('Hello from rails');
-// });
-alert('Hello');

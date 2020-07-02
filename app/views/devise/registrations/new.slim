@@ -6,12 +6,8 @@
       = render "shared/error_notifications", object: resource
 
       .form-group
-        = f.label :first_name
-        = f.text_field :first_name, autofocus: true, autocomplete: "on", class: "form-control"
-
-      .form-group
-        = f.label :last_name
-        = f.text_field :last_name, autocomplete: "on", class: "form-control"
+        = f.label :username
+        = f.text_field :username, autofocus: true, autocomplete: "on", class: "form-control"
 
       .form-group
         = f.label :email

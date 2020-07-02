@@ -10,4 +10,8 @@ html
     title ChatApp
 
   body
-    = yield
+    .row style="max-width: 100%;"
+      .col-md-10.offset-1
+        = render 'shared/notifications'
+
+        = yield

@@ -1,0 +1,10 @@
+/ For Sign in page
+- if flash[:alert]
+  .alert.alert-danger style="background-color: transparent;border: none;color: #d9534f" role="alert"
+    = tag.button type: :button,
+      class: :close,
+      data: { dismiss: "alert" },
+      aria: { label: "Close" } do
+      = tag.span "&times;".html_safe, aria: { hidden: true }, style: "color: #d9534f"
+
+    = I18n.t "devise.failure.invalid", authentication_keys: 'username/email'

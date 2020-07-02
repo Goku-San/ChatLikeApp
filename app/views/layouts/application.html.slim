@@ -4,12 +4,18 @@ html
     = csrf_meta_tags
     = csp_meta_tag
 
+    link[
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"]
+
     = stylesheet_link_tag    'application', media: :screen, 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
     title ChatApp
 
   body
+    = render 'shared/header'
+
     .row style="max-width: 100%;"
       .col-md-10.offset-1
         = render 'shared/notifications'

@@ -1,0 +1,20 @@
+h1 = @room.name
+
+.row
+  .col-12.col-md-3
+    = render 'rooms', rooms: @rooms
+
+  .col
+    .chat
+      - @room_messages.each do |room_message|
+        = room_message
+
+    = form_for @room_message, remote: true do |f|
+      .input-group
+        = f.text_area :message,
+          placeholder: "Enter your message",
+          autofocus:   true,
+          class:       "form-control chat-input"
+
+        .input-group-append
+          = f.submit "Send", class: 'btn btn-primary chat-input'

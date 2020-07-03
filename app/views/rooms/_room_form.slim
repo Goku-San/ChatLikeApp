@@ -1,0 +1,6 @@
+= form_for room do |f|
+  .form-group
+    = f.text_field :name, autocomplete: "on", placeholder: "Enter room name", class: "form-control"
+
+  .form-group
+    = f.submit buttonText, class: "btn btn-sm btn-primary"

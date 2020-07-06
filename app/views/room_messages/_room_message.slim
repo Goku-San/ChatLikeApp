@@ -1,0 +1,11 @@
+.chat-message-container
+  .row.no-gutters
+    .col-auto.text-center
+      = image_tag gravatar_for(room_message.user, size: 32), class: "avatar", alt: "user img"
+
+    .col
+      .message-content
+        .mb-1 = room_message.message
+
+        .text-right
+          small = room_message.created_at

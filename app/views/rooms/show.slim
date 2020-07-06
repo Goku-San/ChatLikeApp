@@ -6,10 +6,11 @@ h1 = @room.name
 
   .col
     .chat
-      - @room_messages.each do |room_message|
-        = room_message
+      = render @room_messages
 
     = form_for @room_message, remote: true do |f|
+      = hidden_field :room_message, :room_id
+
       .input-group
         = f.text_area :message,
           placeholder: "Enter your message",

@@ -1,0 +1,11 @@
+= form_for room_message, remote: true do |f|
+  = hidden_field :room_message, :room_id
+
+  .input-group
+    = f.text_area :message,
+      placeholder: "Enter your message",
+      autofocus:   true,
+      class:       "form-control chat-input"
+
+    .input-group-append
+      = f.submit "Send", class: 'btn btn-primary chat-input'

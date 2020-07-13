@@ -59,4 +59,8 @@ Rails.application.configure do
 
   # For .sass syntax
   config.sass.preferred_syntax = :sass
+
+  # For ActionCable to link it to the main server, which is responsible for transmitting information
+  # between the local system and the main Rails server
+  config.action_cable.mount_path = '/cable'
 end

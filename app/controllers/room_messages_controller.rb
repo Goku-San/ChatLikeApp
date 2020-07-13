@@ -7,10 +7,12 @@ class RoomMessagesController < ApplicationController
       room:    @room,
       message: params.dig(:room_message, :message)
 
-    # redirect_to @room
+    head :ok
+
+    RoomChannel.broadcast_to @room, @room_message
   end
 
-  protected
+  private
 
   def load_room
     @room = Room.find params.dig(:room_message, :room_id)

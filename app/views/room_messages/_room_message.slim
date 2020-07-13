@@ -1,7 +1,7 @@
 .chat-message-container
   .row.no-gutters
     .col-auto.text-center
-      = image_tag gravatar_for(room_message.user, size: 32), class: "avatar", alt: "user img"
+      = image_tag gravatar_for(current_user, size: 32), class: "avatar", alt: "user img"
 
     .col
       .message-content

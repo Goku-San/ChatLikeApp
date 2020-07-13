@@ -1,0 +1,12 @@
+.d-none data-role="message-template"
+  .chat-message-container
+    .row.no-gutters
+      .col-auto.text-center
+        = image_tag "", class: "avatar", alt: "user image", data: { role: "user-avatar" }
+
+      .col
+        .message-content
+          .mb-1 data-role="message-text"
+
+          .text-right
+            small data-role="message-date"

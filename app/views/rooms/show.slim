@@ -5,17 +5,9 @@ h1 = @room.name
     = render 'rooms', rooms: @rooms
 
   .col
-    .chat
+    .chat data-channel-subscribe="room" data-room-id="#{@room.id}"
       = render @room_messages
 
-    = form_for @room_message, remote: true do |f|
-      = hidden_field :room_message, :room_id
+    = render 'room_messages/room_message_form', room_message: @room_message
 
-      .input-group
-        = f.text_area :message,
-          placeholder: "Enter your message",
-          autofocus:   true,
-          class:       "form-control chat-input"
-
-        .input-group-append
-          = f.submit "Send", class: 'btn btn-primary chat-input'
+= render 'room_messages/message_template'

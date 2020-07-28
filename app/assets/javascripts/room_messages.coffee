@@ -4,14 +4,26 @@ $(document).on 'turbolinks:load', ->
   chat.scrollTop(chat[0].scrollHeight) if chat.length
 
   # Clear the message text box
-  $('#new_room_message').on 'ajax:success', (event) ->
-    $(@).find('textarea').val('').focus()
+  roomMessage  = $('#new_room_message')
+  textArea     = roomMessage.find('textarea')
+
+  roomMessage.on 'ajax:success', () ->
+    if textArea.is('.red-placeholder, .is-invalid')
+      console.clear()
+      textArea.attr("placeholder", 'Enter your message').removeClass 'red-placeholder is-invalid'
+
+    textArea.val('').focus()
+
+  roomMessage.on 'ajax:error', (event) ->
+    errorMessage = JSON.parse(event.detail[2].responseText).errors.message
+
+    textArea.attr("placeholder", errorMessage).addClass('red-placeholder is-invalid').focus()
 
   # Submit form when pressing enter/return key
   submit_message = () ->
-    $('#room_message_message').on 'keydown', (event) ->
+    roomMessage.on 'keydown', (event) ->
       if event.keyCode is 13 && !event.shiftKey
-        $('button').click()
+        $('.room-message-btn').click()
         event.target.value = ""
         event.preventDefault()
 

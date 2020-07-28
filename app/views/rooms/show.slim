@@ -8,6 +8,7 @@ h1 = @room.name
     .chat data-channel-subscribe="room" data-room-id="#{@room.id}"
       = render @room_messages
 
-    = render 'room_messages/room_message_form', room_message: @room_message
+    .message-form
+      = render 'room_messages/room_message_form', room_message: @room_message
 
 = render 'room_messages/message_template'

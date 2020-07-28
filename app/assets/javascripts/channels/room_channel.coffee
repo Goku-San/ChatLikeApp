@@ -10,7 +10,7 @@ $(document).on 'turbolinks:load', ->
 
         content.find('[data-role="user-avatar"]').attr 'src', data.user_avatar_url
         content.find('[data-role="message-text"]').text data.message
-        content.find('[data-role="message-date"]').text data.updated_at
+        content.find('[data-role="message-date"]').text data.time_format
 
         element.append content
         element.scrollTop element[0].scrollHeight

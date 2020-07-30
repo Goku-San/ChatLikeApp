@@ -5,5 +5,5 @@ class User < ApplicationRecord
 
   has_many :room_messages, dependent: :destroy
 
-  validates :username, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: { case_sensitive: true }
 end

@@ -1,11 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+message_one:
+  room: lobby
+  user: goku
+  message: Hello buddy
 
-# one:
-#   room: one
-#   user: one
-#   message: MyText
-#
-# two:
-#   room: two
-#   user: two
-#   message: MyText
+message_two:
+  room: lobby
+  user: ann
+  message: Do si do

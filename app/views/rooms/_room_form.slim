@@ -1,4 +1,6 @@
 = form_for room do |f|
+  = render 'shared/error_notifications', object: f.object
+
   .form-group
     = f.text_field :name,
       autocomplete: "on",

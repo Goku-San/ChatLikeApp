@@ -1,7 +1,15 @@
 class RoomChannel < ApplicationCable::Channel
   def subscribed
-    room = Room.find params[:room]
+    reject unless room
 
     stream_for room
+  end
+
+  private
+
+  def room
+    return unless params[:room]
+
+    Room.find params[:room]
   end
 end

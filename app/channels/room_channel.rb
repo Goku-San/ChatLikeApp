@@ -8,8 +8,8 @@ class RoomChannel < ApplicationCable::Channel
   private
 
   def room
-    return unless params[:room]
-
     Room.find params[:room]
+  rescue ActiveRecord::RecordNotFound
+    nil
   end
 end

@@ -18,4 +18,11 @@ class RoomChannelTest < ActionCable::Channel::TestCase
 
     assert subscription.rejected?, "There is active stream! Reject it!"
   end
+
+  test "does not stream with incorrect room id" do
+    subscribe room: -1
+
+    # Asserts that not streams was started
+    assert_no_streams
+  end
 end

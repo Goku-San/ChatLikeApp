@@ -11,8 +11,8 @@ pass the tests, etc...
   *Rails version* **5.2.4.x**
 
   **NOTE** You can also use *rails 6*, but *without yarn and webpack*.\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will have to delete app/javascript folder and create the old structure of rails 5.\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That's how I did it! Its not hard.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will have to delete app/javascript folder and create the old structure of rails 5.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That's how I did it! Its not hard.
 
   *DB* **MariaDB(mysql)** but you can use what ever you like.\
   **NOTE** Don't forget to modify the config/database.yml file if need be.

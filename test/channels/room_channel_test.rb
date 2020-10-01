@@ -22,7 +22,7 @@ class RoomChannelTest < ActionCable::Channel::TestCase
   test "does not stream with incorrect room id" do
     subscribe room: -1
 
-    # Asserts that not streams was started
+    # Asserts that no streams were started
     assert_no_streams
   end
 end
